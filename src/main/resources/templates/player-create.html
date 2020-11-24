@@ -24,6 +24,8 @@
 
         <th>Name</th>
         <th>Last name</th>
+        <th>Number</th>
+        <th>Age</th>
         <th>Create</th>
 
     </tr>
@@ -35,6 +37,14 @@
         <td>
             <label for="lastName">Last name</label>
             <input type="text" th:field="*{lastName}" id="lastName" placeholder="Last Name">
+        </td>
+        <td>
+            <label for="number">number</label>
+            <input type="text" th:field="*{number}" id="number" placeholder="number">
+        </td>
+        <td>
+            <label for="age">age</label>
+            <input type="text" th:field="*{age}" id="age" placeholder="age">
         </td>
         <td > <input type="submit" value="Create player">
         </td>

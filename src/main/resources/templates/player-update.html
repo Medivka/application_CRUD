@@ -25,6 +25,8 @@
         <th>Id</th>
         <th>name</th>
         <th>Last name</th>
+        <th>Number</th>
+        <th>Age</th>
         <th>UPDATE</th>
 
     </tr>
@@ -39,6 +41,12 @@
         <td> <br/>
             <label for="lastName">Last name</label>
             <input type="text" th:field="*{lastName}" id="lastName" placeholder="Last Name"></td>
+        <td> <br/>
+            <label for="lastName">Number</label>
+            <input type="text" th:field="*{number}" id="number" placeholder="number"></td>
+        <td> <br/>
+            <label for="age">Age</label>
+            <input type="text" th:field="*{age}" id="age" placeholder="age"></td>
         <td> <br/>
             <input type="submit" value="Update Player"></td>
            </form>
