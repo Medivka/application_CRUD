@@ -18,12 +18,8 @@ public class Player {
     private String name;
     @Column(name = "last_name")
     private String lastName;
-
     @Column(name = "player_number")
     private Long number;
-
-
-
     @Column(name = "player_age")
     private Long age;
 

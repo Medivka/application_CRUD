@@ -35,9 +35,10 @@
             </thead>
             <tbody>
             <tr th:each="player : ${players}">
-                <td th:text="${player.id}"></td>
+            <td th:text="${player.id}"> </td>
                 <td th:text="${player.name}"></td>
-                <td th:text="${player.lastName}"></td>
+
+               <td th:text="${player.lastName}"></td>
                 <td th:text="${player.number}"></td>
                 <td th:text="${player.age}"></td>
                  <td><a th:href="@{player-update/{id}(id=${player.id})}"><button type="submit">Edit</button></a></td>
