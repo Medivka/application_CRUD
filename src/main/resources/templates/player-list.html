@@ -2,7 +2,7 @@
         "http://www.w3.org/TR/html4/loose.dtd">
 <html xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
-      <title>PLAYERS</title>
+    <title>PLAYERS</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
@@ -35,20 +35,27 @@
             </thead>
             <tbody>
             <tr th:each="player : ${players}">
-            <td th:text="${player.id}"> </td>
+                <td th:text="${player.id}"></td>
                 <td th:text="${player.name}"></td>
-
-               <td th:text="${player.lastName}"></td>
+                <td th:text="${player.lastName}"></td>
                 <td th:text="${player.number}"></td>
                 <td th:text="${player.age}"></td>
-                 <td><a th:href="@{player-update/{id}(id=${player.id})}"><button type="submit">Edit</button></a></td>
-                 <td><a th:href="@{player-delete/{id}(id=${player.id})}"><button type="submit">Delete</button></a></td>
+                <td><a th:href="@{player-update/{id}(id=${player.id})}">
+                    <button type="submit">Edit</button>
+                </a></td>
+                <td><a th:href="@{player-delete/{id}(id=${player.id})}">
+                    <button type="submit">Delete</button>
+                </a></td>
             </tr>
             </tbody>
         </table>
     </div>
-    <p><a href="/player-create"><button type="submit">Create player</button></a></p>
-    <p><a href="/"><button type="submit">return main</button></a></p>
+    <p><a href="/player-create">
+        <button type="submit">Create player</button>
+    </a></p>
+    <p><a href="/">
+        <button type="submit">return main</button>
+    </a></p>
 </div>
 
 </body>
@@ -68,11 +75,39 @@
     }
 </style>
 <style>
-    table {width: 100%; text-align: center; border-bottom: 2px solid #dfdfdf; border-radius: 6px; border-collapse: separate; border-spacing: 1px;}
-    table thead tr {color: #ffffff; font-weight: bold; background: #c83240;}
-    table tr td {border-right: 1px solid #dfdfdf;}
-    table tr td:last-child {border-right: 2px;}
-    table tbody tr:nth-child(1n) {background: #f6f6f6;}
-    table tbody tr:nth-child(2n) {background: #e6e6e6;}
-    table tbody tr:hover {background: #ffe8e8; transition-duration: 0.6s;}
+    table {
+        width: 100%;
+        text-align: center;
+        border-bottom: 2px solid #dfdfdf;
+        border-radius: 6px;
+        border-collapse: separate;
+        border-spacing: 1px;
+    }
+
+    table thead tr {
+        color: #ffffff;
+        font-weight: bold;
+        background: #c83240;
+    }
+
+    table tr td {
+        border-right: 1px solid #dfdfdf;
+    }
+
+    table tr td:last-child {
+        border-right: 2px;
+    }
+
+    table tbody tr:nth-child(1n) {
+        background: #f6f6f6;
+    }
+
+    table tbody tr:nth-child(2n) {
+        background: #e6e6e6;
+    }
+
+    table tbody tr:hover {
+        background: #ffe8e8;
+        transition-duration: 0.6s;
+    }
 </style>
