@@ -10,6 +10,21 @@
 <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
     <h5 class="my-0 mr-md-auto font-weight-normal"><a class="p-2 text-dark" href="/">My test project</a></h5>
     <nav class="my-2 my-md-0 mr-md-3">
+        <script type="text/javascript">
+            setInterval(function () {
+                date = new Date(),
+                    h = date.getHours(),
+                    m = date.getMinutes(),
+                    s = date.getSeconds(),
+                    h = (h < 10) ? '0' + h : h,
+                    m = (m < 10) ? '0' + m : m,
+                    s = (s < 10) ? '0' + s : s,
+                    document.getElementById('time').innerHTML = h + ':' + m + ':' + s;
+            }, 1000);
+        </script>
+        <span id="time" >00:00:00</span>
+
+
         <a class="p-2 text-dark" href="/me">About me</a>
         <a class="p-2 text-dark" href="/players">My project</a>
         <a class="p-2 text-dark" href="/my_contact">Contact</a>
